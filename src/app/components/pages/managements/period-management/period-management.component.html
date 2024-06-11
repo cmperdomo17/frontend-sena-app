@@ -1,0 +1,25 @@
+<app-control-side-bar></app-control-side-bar>
+
+<div class="flex justify-center items-center h-full md:h-screen lg:h-screen z-0 flex-col gap-6 py-20 md:py-0">
+    <div class="fixed top-0 left-0 z-30 w-full">
+        <app-confirm-message 
+            *ngIf="showInactivateMessage"
+            [title]="message"
+            (confirmAction)="confirmChangeStatePeriod()"
+            (cancelAction)="cancelInactivate()">
+        </app-confirm-message>
+    </div>
+    <div class="fixed top-12 z-30 w-full">
+        <app-success-message *ngIf="success" [message]="success"></app-success-message>
+    </div>
+    <h1 class="text-2xl font-semibold">Periodos</h1>
+    <app-table-crud 
+        [headers]="['Código', 'Fecha Inicio', 'Fecha Final', 'Nombre', 'Estado', 'Acciones']" 
+        [attributes]="['period_id', 'period_start_date', 'period_end_date', 'period_name', 'period_state']"
+        [list]="listPeriods" [editRoute]="'/periods/form/'"
+        [editRoute]="'/periods/form/'"
+        (parentFunction)="prepareChangeStateProgram($event)">
+    </app-table-crud>
+    <app-button routerLink="/periods/form">Crear Periodo</app-button>
+
+</div>

@@ -1,0 +1,38 @@
+.signout_message {
+    background-color: #12161e;
+    color: white;
+    animation: slide-in 700ms forwards;
+    position: absolute;
+    font-size: 18px;
+    transform: translateX(-50%);
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(10%);
+    }
+}
+
+@media (max-width: 768px) {
+    .signout_message {
+        font-size: 15px;
+        animation: slide-down 700ms forwards;
+        text-align: center;
+    }
+    .signout_message svg {
+        width: 13px;
+        height: 13px;
+    }
+}

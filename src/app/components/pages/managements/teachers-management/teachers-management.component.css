@@ -1,0 +1,33 @@
+.inactivate_message {
+    background-color: #12161e;
+    color: white;
+    animation: slide-in 700ms forwards;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(10%);
+    }
+}
+
+@media (max-width: 768px) {
+    .inactivate_message {
+        font-size: 12px;
+        animation: slide-down 700ms forwards;
+    }
+}
