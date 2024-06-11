@@ -11,7 +11,7 @@ export class LoginService {
   
   token = AppToken.getInstance();
 
-  API_URI = 'https://backend-sena-app-production.up.railway.app/login';
+  API_URI = 'https://backend-sena-app.onrender.com/login';
 
   constructor(private http: HttpClient, private router: Router) { }
 

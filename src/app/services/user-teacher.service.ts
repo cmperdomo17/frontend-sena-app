@@ -8,7 +8,7 @@ import { Teacher } from '../models/Teachers';
 })
 export class UserTeacherService {
   
-  API_URI = 'https://backend-sena-app-production.up.railway.app/api';
+  API_URI = 'https://backend-sena-app.onrender.com/api';
 
   token = AppToken.getInstance();
   auxToken = this.token.getToken();
