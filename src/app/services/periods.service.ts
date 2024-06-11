@@ -9,7 +9,7 @@ import { Period } from '../models/Period';
 
 export class PeriodsService {
 
-  API_URI = 'https://backend-sena-app.onrender.com/api';
+  API_URI = 'http://backend-sena-app.onrender.com/api';
 
   token = AppToken.getInstance();
   auxToken = this.token.getToken();
