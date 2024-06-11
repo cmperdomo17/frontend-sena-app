@@ -17,7 +17,7 @@ export class LoginService {
 
   validateLogin(user: userModel) {
     console.log(user);
-    return this.http.post(`${this.API_URI}`, user, { observe: 'response', withCredentials: true });
+    return this.http.post(`${this.API_URI}/login`, user);
   }
 
   logout() {
